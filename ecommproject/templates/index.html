@@ -1,0 +1,52 @@
+{% include 'header.html' %}
+<title>Ekart|home</title>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 bg-light p-3">
+            <h5>Filter By Category</h5>
+            <p><a href="#">By mobile</a></p>
+            <p><a href="#">By Clothes</a></p>
+            <p><a href="#">By Shoes</a></p>
+            <hr>
+            <h5>Filter By Price</h5>
+            <hr>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="mb-2">
+                    <label class="form-label"><strong>Min:</strong></label>
+                    <input type="number"  class="form-control" name="min" placeholder="minimum Price">
+                </div>
+                <div class="mb-2">
+                    <label class="form-label"><strong>Min:</strong></label>
+                    <input type="number"  class="form-control" name="min" placeholder="Maximum Price">
+                </div>
+                <div class="mb-2">
+                    <input type="submit"  class="btn btn-danger" placeholder="SEARCH">
+                </div>
+            </form>
+            <h5 class="mt-3">Sort By Price</h5>
+            <hr>
+            <p><a href="#">High to Low</a></p>
+            <p><a href="#">Low to High</a></p>
+        </div>
+        <div class="col-md-9  mt-4 bg-light p-3">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://img.freepik.com/free-photo/marketing-creative-collage-with-phone_23-2149379900.jpg?size=626&ext=jpg" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">Add to Cart</a>
+                          <a href="#" class="btn btn-primary">Buy Now</a>
+                        </div>
+                      </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% include 'footer.html' %}
